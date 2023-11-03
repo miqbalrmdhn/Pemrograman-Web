@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="form-title">Form Pemesanan</h1>
+        <form id="orderForm">
+            <div class="input-box">
+                <label for="nama">Makanan:</label>
+                <input type="text" id="nama" name="nama" class="input-field">
+            </div>
+            <div class="input-box">
+                <label for="jumlah">Jumlah pesanan:</label>
+                <input type="number" id="jumlah" name="jumlah" class="input-field">
+            </div>
+            <div class="input-box">
+                <label for="kupon">Kode Kupon:</label>
+                <input type="text" id="kupon" name="kupon" class="input-field">
+            </div>
+            <button type="button" onclick="hitungTotal()" class="calculate-button">Hitung Total</button>
+        </form>
+        <div class="output-box">
+            <h2 class="output-title">Output:</h2>
+            <p><strong>Nama Makanan:</strong> <span id="outputNama" class="output-value"></span></p>
+            <p><strong>Jumlah Pesanan:</strong> <span id="outputJumlah" class="output-value"></span></p>
+            <p><strong>Total Diskon:</strong> <span id="outputDiskon" class="output-value"></span></p>
+            <p><strong>Total Harga:</strong> <span id="outputHarga" class="output-value"></span></p>
+        </div>
+    </div>
+
+    <script>
+        function hitungTotal() {
+            const nama = document.getElementById("nama").value;
+            const jumlah = parseFloat(document.getElementById("jumlah").value);
+            const kupon = document.getElementById("kupon").value;
+
+            // Harga per barang
+            const hargaPerBarang = 10; // Ganti sesuai kebutuhan
+
+            // Hitung harga total sebelum diskon
+            let totalHarga = hargaPerBarang * jumlah;
+            let diskon = 0;
+
+            // Cek apakah kupon valid
+            if (kupon === "kopinikmatgabikinkembung") {
+                // Terapkan diskon 20% jika kupon valid
+                diskon = totalHarga * 0.2;
+                totalHarga -= diskon;
+            }
+
+            // Tampilkan hasil pada output
+            document.getElementById("outputNama").textContent = nama;
+            document.getElementById("outputJumlah").textContent = jumlah;
+            document.getElementById("outputDiskon").textContent = diskon;
+            document.getElementById("outputHarga").textContent = totalHarga;
+        }
+    </script>
+</body>
+</html>

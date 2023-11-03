@@ -1,0 +1,56 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-title {
+    font-size: 24px;
+}
+
+.input-box {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.input-field {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.calculate-button {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+}
+
+.output-box {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.output-title {
+    font-size: 20px;
+}
+
+.output-value {
+    font-weight: bold;
+}
