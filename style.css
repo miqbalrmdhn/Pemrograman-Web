@@ -1,0 +1,89 @@
+/* Reset default margin and padding */
+body, h1, h2, p, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.center {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    width: 325px; 
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #f0f0f0;
+    padding: 20px; 
+    border: 2px solid #3498db;
+    border-radius: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    background-color: #eee;
+    cursor: pointer;
+    border: 2px solid #333;
+    transition: background-color 0.2s, color 0.2s; 
+}
+
+.cell.X {
+    color: #3498db;
+}
+
+.cell.O {
+    color: #e74c3c;
+}
+
+.cell.win {
+    background-color: #f1c40f;
+}
+
+.status {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s; /* Smooth button hover */
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode-button {
+    background-color: #222;
+    color: #fff;
+}
+
+    
